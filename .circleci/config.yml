@@ -33,20 +33,10 @@ jobs:
   deploy:
     machine:
         enabled: true
-    working_directory: ~/cube-ui
+    working_directory: ~/repo
     environment:
       - HEROKU_APP: zcube
     steps:
-      - restore_cache:
-          keys:
-            - v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          keys:
-            - v1-bundle-{{ checksum "Gemfile.lock" }}
-      - restore_cache:
-          keys:
-            - v1-assets-{{ .Environment.CIRCLE_SHA1 }}
-      - checkout
       - run:
           name: Deploy Master to Heroku
           command: |
