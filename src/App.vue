@@ -1,7 +1,6 @@
 <template lang="pug">
   #app.container.is-fluid.is-marginless
-    #nav: .tabs.is-centered.is-boxed.is-medium
-      Tabs
+    Tabs
     router-view
 </template>
 
@@ -31,6 +30,7 @@ export default {
 <style lang="scss">
 #app {
   text-align: center;
+  padding: 5px;
 }
 #nav {
   padding: 30px;
