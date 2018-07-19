@@ -14,6 +14,9 @@ export default {
   data() {
     // eslint-disable-next-line
     // return {  albumTags: this.albumTags, }
+    return {
+
+    }
   },
 }
 </script>
